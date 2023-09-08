@@ -6,6 +6,10 @@ const screen = document.querySelector('#screen')
 const canvas = document.querySelector("canvas")
 const ctx = canvas.getContext("2d")
 
+ctx.beginPath()
+ctx.font = " 50px Arial "
+ctx.fillStyle = "coral"
+ctx.fillText("Im Switch! ", 50, 50, 400)
 
 canvas.width = window.innerWidth
 canvas.height = window.innerHeight
@@ -46,19 +50,19 @@ eraseBtn.addEventListener("click", () => {
 rangeInput.addEventListener("input", () => {
     console.log(rangeInput)
     size = rangeInput.value
-    screen.innerHTML= `${size}`
+    screen.innerHTML= `${size}%`
 })
 
-canvas.addEventListener("mousedown", () => {
+canvas.addEventListener("pointerdown", () => {
     isActive = true
     
 })
-canvas.addEventListener("mouseup", () => {
+canvas.addEventListener("pointerup", () => {
     isActive=false
     
 })
 
-canvas.addEventListener("mousemove", (e) => {
+canvas.addEventListener("pointermove", (e) => {
     const { x, y } = e
     console.log({isErasing, isActive, isDrawing})
     if (!isActive) return
