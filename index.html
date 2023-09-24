@@ -1,28 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Geralds Drawing board</title>
+    <title>Drawing Board</title>
     <link rel="stylesheet" href="draw.css">
 </head>
+
 <body>
-    <div id="container">
-        
-        <canvas>
-        </canvas>
+    <div class="container">
+        <canvas></canvas>
 
         <div class="options">
-            <button  id="draw">draw</button>
-            <button  id="erase">erase</button>
-
-
-            <input type="range" min="5" max="50" value="5">
+            <button id="draw">Draw</button>
+            <button id="erase">Erase</button>
+            <input type="range" min="5" max="60" value="5">
             <span id="screen">5</span>
+            <div>
+                <span style="font-size: .6rem;">choose-color</span>
+                <input type="color" id="color">
+            </div>
         </div>
-
     </div>
-
     <script src="draw.js"></script>
 </body>
+
 </html>
